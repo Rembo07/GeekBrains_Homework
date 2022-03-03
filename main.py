@@ -1,4 +1,4 @@
-seconds = int(input('Введите кол-во секунд: '))
+seconds = int(input('Введите количество секунд: '))
 
 minutes = seconds // 60
 remainder_minutes = seconds % 60
