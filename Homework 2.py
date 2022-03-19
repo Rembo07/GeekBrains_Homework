@@ -15,3 +15,4 @@ res2 = sum(filter(lambda num: sum_digits(num + 17) % 7 == 0, arr)) #если д�
 
 print(res1)
 print(res2)
+print(sum_digits(25))
