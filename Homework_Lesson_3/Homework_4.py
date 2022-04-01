@@ -1,35 +1,16 @@
-
-
-def thesaurus_adv(*NameSurname):
-    name = {}
-    for ns in NameSurname:
-        nsx = list(ns)
-        name_rev = ' '.join(ns.split(' ')[::-1])
-        idx = list(name_rev)
-
-        if idx[0] == 'С':
-            if nsx[0] == 'И':
-                name.setdefault(idx[0], {}).setdefault(nsx[0], []).append(ns)
-            elif nsx[0] == 'А':
-                name.setdefault(idx[0], {}).setdefault(nsx[0], []).append(ns)
-            else:
-                print('Excepted')
-        elif idx[0] == 'А':
-            if  nsx[0] == 'П':
-                name.setdefault(idx[0], {}).setdefault(nsx[0], []).append(ns)
-            else:
-                print('Excepted')
-        elif idx[0] == 'И':
-            if nsx[0] == 'И':
-                name.setdefault(idx[0], {}).setdefault(nsx[0], []).append(ns)
-            else:
-                print('Excepted')
-        else:
-            print('Excepted')
-    print(name)
-    sorted_dict = {x: name[x] for x in sorted(name)}
-    print(sorted_dict)
+def thesaurus_adv(*name_surname):
+    result_dict = {}
+    for ns in name_surname:
+        name_list = list(ns)
+        surname_first = ' '.join(ns.split(' ')[::-1])
+        surname_list = list(surname_first)
+        result_dict.setdefault(surname_list[0], {}).setdefault(name_list[0], []).append(ns)
+    print(result_dict)
 
 
 
-thesaurus_adv("Иван Сергеев", "Инна Серова", "Петр Алексеев", "Илья Иванов", "Анна Савельева")
+
+thesaurus_adv('Artem Bobrov', 'Vladimir Burcev', 'Gomorov Roman', )
+
+
+

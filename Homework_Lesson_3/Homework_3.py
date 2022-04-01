@@ -1,19 +1,8 @@
-
-def thesaurus(*arg):
+def thesaurus(*names):
     name = {}
-    for i in arg:
-
+    for i in names:
         name_list = list(i)
-        if name_list[0] == "И":
-            name.setdefault(name_list[0], []).append(i)
-        elif name_list[0] == "М":
-            name.setdefault(name_list[0], []).append(i)
-        elif name_list[0] == "П":
-            name.setdefault(name_list[0], []).append(i)
-        else:
-            print('Extented')
-        sorted(name)
-    print(name)
+        name.setdefault(name_list[0], []).append(i)
+    return name
 
-
-thesaurus("Иван", "Мария", "Петр", "Илья" )
+print(thesaurus('Patrick', 'Amanda', 'Panda', 'Artur'))
