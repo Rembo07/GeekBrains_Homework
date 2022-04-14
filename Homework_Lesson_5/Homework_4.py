@@ -8,4 +8,3 @@ for num in range(len(src) - 1):
         result.append(second)
 
 print(result)
-
