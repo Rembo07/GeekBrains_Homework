@@ -19,7 +19,7 @@ i = 1
 result_dict = {}
 
 for _ in range(len(str(max_size))):
-    i **= 10
+    i *= 10
     result_dict[i] = (0, [])
 
 for file in roads:
